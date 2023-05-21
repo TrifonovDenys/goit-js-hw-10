@@ -25,6 +25,7 @@ function onSerch() {
   div.innerHTML = ''
   list.innerHTML= ''
   fetchCountries(search.value).then(data => {
+    console.log(data);
     if (data.length === 1) {
       div.insertAdjacentHTML("beforeend", createMarkupDiv(data))     
     } else if(data.length > 1 && data.length < 10) {
@@ -57,7 +58,6 @@ function createMarkupDiv(arr) {
 
 
 function createMarkupList(arr) {
-  
   return arr.map(({ flags: { svg, alt }, name: {common} }) => {
     return `<li class="list-item"><img class="list-img" src="${svg}" alt="${alt}"><p>${common}</p></li>`
   }).join(' ')

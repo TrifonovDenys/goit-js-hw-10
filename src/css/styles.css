@@ -24,7 +24,6 @@ ul{
 
 .list-item{
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   margin-bottom: 10px;
 }
@@ -37,7 +36,4 @@ margin-right: 5px;
 
 .single-img{
 height: 100px;
-}
-.country-info{
-  
 }
